@@ -16,8 +16,11 @@ function App() {
     // setCounter(counter +1)
 
     const addValue = () => {
-        counter = counter + 1;
-        setCounter(counter)
+        if(counter >= 20) {
+            setCounter(20)
+        } else{
+            setCounter(counter+1)
+        }
     }
 
     const subtractValue = () => {
