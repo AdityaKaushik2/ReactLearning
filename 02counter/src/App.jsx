@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {useState} from "react";
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    /*
+     * useState() is a hook that allows you to have state variables in functional components.
+     * useState() is responsible for to propagate the changes in UI
+     * we can provide any default value for variable
+     * useState() return an array in which at 0th index it is containing counter in our case
+     * and at 1st index it contains a function which is responsible to update the variable at 0th index
+     */
+    let [counter, setCounter] = useState(1) //in this case initial State of our counter is 1
+    // let counter = 0;
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // setCounter(counter +1)
+
+    const addValue = () => {
+        counter = counter + 1;
+        setCounter(counter)
+    }
+
+    const subtractValue = () => {
+        setCounter(counter - 1)
+    }
+    return (
+        <>
+            <h1>Learning React</h1>
+            <h2>Counter value: {counter}</h2>
+            <button onClick={addValue}>Add Value</button>
+            <button onClick={subtractValue}>Subtract Value</button>
+        </>
+    )
 }
 
 export default App
