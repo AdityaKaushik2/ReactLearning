@@ -21,7 +21,11 @@ function App() {
     }
 
     const subtractValue = () => {
-        setCounter(counter - 1)
+        if (counter > 0) {
+            setCounter(counter - 1);
+        } else {
+            setCounter(0)
+        }
     }
     return (
         <>
