@@ -19,3 +19,5 @@
 ## Good Practices for creating a component - function name should be start with capital letter
 
 ## inside JSX if we have to write JS code we have to use {} curly braces but in those curly braces we can only write final value not any statement or loop or condition. its known as evaluated expression. if we want to perform any logic or condition we have to write it outside of JSX and then use it inside JSX.
+
+## OnCLick() Method requires a function to be passed as a parameter. If we pass a function with () then it will be called immediately. So we have to pass a function without ().
