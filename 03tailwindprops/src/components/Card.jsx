@@ -1,6 +1,6 @@
 import React from 'react';
-
-function Card({username, btnText="default value"}) {
+// function Card(props)
+function Card({username, btnText="default value"})  {  //destructed props
     return (
             <div className="relative h-[400px] w-[300px] rounded-md">
                 <img
