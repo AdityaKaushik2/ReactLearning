@@ -1,9 +1,9 @@
-import React from "react";
+import { createContext } from "react";
 
 /*
  *Every Context is a provider
  *With every context we have to create a provider
  */
-const UserContext = React.createContext();
+const UserContext = createContext();
 
 export default UserContext;
